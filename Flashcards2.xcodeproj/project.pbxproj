@@ -16,6 +16,7 @@
 		2617A86B27D2E6C7000B2C8C /* Flashcards2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2617A86A27D2E6C7000B2C8C /* Flashcards2Tests.swift */; };
 		2617A87527D2E6C7000B2C8C /* Flashcards2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2617A87427D2E6C7000B2C8C /* Flashcards2UITests.swift */; };
 		2617A87727D2E6C7000B2C8C /* Flashcards2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2617A87627D2E6C7000B2C8C /* Flashcards2UITestsLaunchTests.swift */; };
+		26B2EB1D27E53E4C005AEBAE /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2EB1C27E53E4C005AEBAE /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2617A87027D2E6C7000B2C8C /* Flashcards2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Flashcards2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2617A87427D2E6C7000B2C8C /* Flashcards2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcards2UITests.swift; sourceTree = "<group>"; };
 		2617A87627D2E6C7000B2C8C /* Flashcards2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcards2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		26B2EB1C27E53E4C005AEBAE /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2617A85527D2E6C4000B2C8C /* SceneDelegate.swift */,
 				2617A85727D2E6C4000B2C8C /* ViewController.swift */,
 				2617A85927D2E6C4000B2C8C /* Main.storyboard */,
+				26B2EB1C27E53E4C005AEBAE /* CreationViewController.swift */,
 				2617A85C27D2E6C7000B2C8C /* Assets.xcassets */,
 				2617A85E27D2E6C7000B2C8C /* LaunchScreen.storyboard */,
 				2617A86127D2E6C7000B2C8C /* Info.plist */,
@@ -261,6 +264,7 @@
 				2617A85827D2E6C4000B2C8C /* ViewController.swift in Sources */,
 				2617A85427D2E6C4000B2C8C /* AppDelegate.swift in Sources */,
 				2617A85627D2E6C4000B2C8C /* SceneDelegate.swift in Sources */,
+				26B2EB1D27E53E4C005AEBAE /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,11 +43,29 @@
                                     <outletCollection property="gestureRecognizers" destination="SFQ-93-aSa" appends="YES" id="gOp-hg-8zZ"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ug-Mk-fg3">
+                                <rect key="frame" x="173" y="535" width="68" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="zvo-VB-UcS" kind="presentation" id="Cco-Pq-MAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                     </view>
+                    <navigationItem key="navigationItem" id="Fe0-4X-kDD"/>
                     <connections>
                         <outlet property="backLabel" destination="CLH-uo-1xI" id="wDI-4h-pNU"/>
                         <outlet property="frontLabel" destination="QSr-Tq-5Dm" id="IS7-cc-RnM"/>
@@ -60,7 +78,79 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+            <point key="canvasLocation" x="928.98550724637687" y="79.6875"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="0qO-oH-Ur6">
+            <objects>
+                <viewController id="Pmv-mb-dEd" customClass="CreationViewController" customModule="Flashcards2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YVp-zq-XVD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="question" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adQ-4J-cqj">
+                                <rect key="frame" x="159" y="295" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2A-xb-WUA">
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UP5-xw-Ok5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TUY-Gb-34c">
+                        <barButtonItem key="leftBarButtonItem" title="cancel" id="eje-y1-bH1">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="Pmv-mb-dEd" id="Crs-cA-FjU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="0L0-px-QUk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jb9-fe-Z9Z">
+                                <rect key="frame" x="302" y="11" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="done"/>
+                                <connections>
+                                    <action selector="didTapOnDone:" destination="Pmv-mb-dEd" eventType="touchUpInside" id="D9d-N0-aF7"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="didTapOnDone:" destination="Pmv-mb-dEd" id="MBQ-Ve-v4C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="E2A-xb-WUA" id="xOk-Dg-Dyu"/>
+                        <outlet property="questionTextField" destination="adQ-4J-cqj" id="8kN-FL-HdL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxE-eB-HRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2978" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SLl-6C-BxT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zvo-VB-UcS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ac3-KW-JU8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pmv-mb-dEd" kind="relationship" relationship="rootViewController" id="1yi-PY-J6J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNs-LX-Bkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="80"/>
         </scene>
     </scenes>
     <resources>
