@@ -26,14 +26,27 @@ class CreationViewController: UIViewController {
     }
     
     @IBAction func didTapOnDone(_ sender: Any) {
-        
+        // get text in question text field
         let questionText = questionTextField.text
         
+        // get text in answer text field
         let answerText = answerTextField.text
         
-        flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+        // check if the text fields are empty, if yes, error alert will pop up
+        if questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty {
+            // create error alert
+            let alert = UIAlertController(title: "Missing text", message: "Please input both question and answer", preferredStyle: UIAlertController.Style .alert)
+            
+            // show error alert
+            present(alert, animated: true)
+        } else {
+            // if text fields are not empty
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+            
+            dismiss(animated: true)
+        }
         
-        dismiss(animated: true)
+        
         
     }
    
