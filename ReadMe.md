@@ -8,7 +8,6 @@ Added App cover as well as animations for the flashcard flips
 ### App Walk-though
 http://g.recordit.co/F3tErjiOUA.gif
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [x] User should see the app icon 
