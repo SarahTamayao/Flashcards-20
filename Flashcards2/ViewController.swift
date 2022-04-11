@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
     
-
+    @IBOutlet weak var card: UIView!
+    
     
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -74,18 +75,53 @@ class ViewController: UIViewController {
         
         // update flashcards
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        
-        if frontLabel.isHidden == true {
-            frontLabel.isHidden = false
-        }
-        else{
+        flipFlashcard()
+       
+    }
+    func flipFlashcard() {
+    
             frontLabel.isHidden = true
-        }
+        
+        
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            
+            self.frontLabel.isHidden = true
+            
+        })
+
+        
+        
+        
+       
+        
     }
     
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3, animations:{
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y:0.0)
+        }, completion: { finished in
+            self.updateLabels() // Update labels
+            self.animateCardIn() // Run other animation
+        })
+        
+        
+
+    }
+    
+    func animateCardIn() {
+        // start on the right side (don't animate this)
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        // animate card going back to its original position
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
     func updateFlashcard(question: String, answer: String){
         let flashcard = Flashcard(question: question, answer: answer)
         
